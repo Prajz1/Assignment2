@@ -166,6 +166,8 @@ namespace Assignment2
             IWebElement switchin = driver.FindElement(By.Id("openwindow"));
             switchin.Click();
             Thread.Sleep(3000);
+            driver.SwitchTo().Window(driver.WindowHandles[1]);
+            driver.Close();
             driver.SwitchTo().Window(driver.WindowHandles[0]);
 
         }
@@ -175,8 +177,9 @@ namespace Assignment2
             IWebElement switchtab = driver.FindElement(By.Id("opentab"));
             switchtab.Click();
             Thread.Sleep(3000);
+            driver.SwitchTo().Window(driver.WindowHandles[1]);
+            driver.Close();
             driver.SwitchTo().Window(driver.WindowHandles[0]);
-
         }
 
         //switch alter
